@@ -169,34 +169,47 @@ const Dashboard = () => {
               Recent Analytics
             </Typography>
           </Box>
-          {mockTransactions.map((transaction, i) => (
-            <Box
-              key={`${transaction.txId}-${i}`}
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-              borderBottom={`4px solid ${colors.primary[500]}`}
-              p="15px"
-            >
-              <Box>
-                <Typography
-                  color={colors.greenAccent[500]}
-                  variant="h5"
-                  fontWeight="600"
-                >
-                  Group with Maximum Participants: group_title CryptoMoonShots
-                  Chat 加密月球shots group_participants 36694
-                </Typography>
-                <Typography color={colors.grey[100]}></Typography>
-              </Box>
-              <Box color={colors.grey[100]}></Box>
-              <Box
-                backgroundColor={colors.greenAccent[500]}
-                p="5px 10px"
-                borderRadius="4px"
-              ></Box>
+          {/* {mockTransactions.map((transaction, i) => ( */}
+          <Box
+            // key={`${transaction.txId}-${i}`}
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+            alignItems="center"
+            borderBottom={`4px solid ${colors.primary[500]}`}
+            p="15px"
+          >
+            <Box>
+              <Typography
+                color={colors.greenAccent[500]}
+                variant="h5"
+                fontWeight="600"
+              >
+                Group with Maximum Participants: group_title CryptoMoonShots
+                Chat 加密月球shots group_participants 36694
+              </Typography>
+              <Typography color={colors.grey[100]}></Typography>
             </Box>
-          ))}
+
+            <Box color={colors.grey[100]}></Box>
+            {/* <Box
+              backgroundColor={colors.greenAccent[500]}
+              p="5px 10px"
+              borderRadius="4px"
+            ></Box> */}
+          </Box>
+          <Box>
+            <Typography
+              color={colors.greenAccent[500]}
+              variant="h5"
+              fontWeight="600"
+            >
+              New Text
+            </Typography>
+            <Typography color={colors.grey[100]}></Typography>
+          </Box>
+
+          {/* ))} */}
         </Box>
         <Box
           gridColumn="span 4"
@@ -212,7 +225,7 @@ const Dashboard = () => {
             Sentiment Analysis
           </Typography>
           <Box height="200px">
-            <Sentiment/>
+            <Sentiment />
           </Box>
         </Box>
       </Box>
